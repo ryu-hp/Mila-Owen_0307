@@ -1,0 +1,733 @@
+@charset "UTF-8";
+
+/* フッター */
+@media screen and (min-width: 768px) {
+    .footer {
+        padding-top: 27.7rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer {
+        padding-top: calc(192 *(100vw / 750));
+    }
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////
+                                    ▼ 下記よりCSSの追加をお願いします ▼                              
+/////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+// Reset css
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+main,
+aside,
+figure,
+figcaption {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  vertical-align: top;
+}
+
+
+// ブレイクポイント
+$breakpoint-sp: 767px;
+
+@mixin mq($breakpoint) {
+    @if $breakpoint == sp {
+        @media screen and (max-width: $breakpoint-sp) {
+            @content;
+        }
+    }
+}
+
+// フォント
+$font-family-main: "neue-haas-grotesk-display", sans-serif;
+
+///// main
+#MO25313NEW {
+    margin: 0 auto;
+    padding: 0 0 30rem 0;
+    color: #000000;
+    font-weight: 400;
+    font-family: $font-family-main;
+    letter-spacing: 0.03em;
+    overflow-x: clip;
+    width: 100%;
+
+    .sp_only {
+        display: none;
+        @include mq(sp) {
+            display: block;
+        }
+    }
+    .pc_only {
+        @include mq(sp) {
+            display: none;
+        }
+    }
+
+    // FV
+    .fv {
+        margin-inline: auto;
+        width: 100%;
+        max-width: 128rem;
+
+        a {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .fv__video {
+        width: 100%;
+    }
+
+    // Title
+    .title {
+        margin-top: 8.45rem;
+        text-align: center;
+        img {
+            width: 100%;
+            max-width: 41.5rem;
+        }
+    }
+
+// -----------------------------------------------------------------
+// Product 共通スタイル
+// -----------------------------------------------------------------
+    .product__item{
+        width: 100%;
+        max-width: 140rem;
+        margin-inline: auto;
+    }
+    // product__image
+    .product__image {
+        & > a {
+            display: block;
+        }
+    }
+
+    // product__credit
+    .product__credit {
+        font-size: 1.3rem;
+        line-height: 2;
+    }
+
+// -----------------------------------------------------------------
+// Product 個別スタイル
+// -----------------------------------------------------------------
+    // product__image-wrap--01
+    .product__image-wrap--01 {
+        position: relative;
+        margin-top: 15.5rem;
+        height: 163.4rem;
+    }
+
+    .product__image--01_1 {
+        position: absolute;
+        top: 22.5rem;
+        left: 22.5rem;
+
+        img {
+            width: 100%;
+            max-width: 54rem;
+        }
+    }
+
+    .product__credit--01 {
+        position: absolute;
+        bottom: -0.6rem;
+        right: 0;
+        transform: translateX(calc(100% + 3.5rem));
+    }
+
+    .product__image--01_2 {
+        position: absolute;
+        top: 0;
+        right: 23.5rem;
+
+        img {
+            width: 100%;
+            max-width: 36rem;
+        }
+    }
+
+    .product__image--01_3 {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 108.8rem;
+
+        .movie {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    // product__image-wrap--02
+    .product__image-wrap--02 {
+        position: relative;
+        margin-top: 13.8rem;
+        text-align: center;
+    }
+
+    .product__image--02_1 {
+        img {
+            width: 100%;
+            max-width: 50rem;
+        }
+    }
+
+    .product__image--02_2 {
+        margin-top: 4.5rem;
+
+        img {
+            width: 100%;
+            max-width: 40rem;
+        }
+    }
+
+    .product__credit--02 {
+        margin-top: 2.8rem;
+
+        a {
+            margin-right: 0.6rem;
+
+            &:nth-child(3),
+            &:nth-child(7) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    // product__image-wrap--03
+    .product__image-wrap--03 {
+        position: relative;
+        margin-top: 13.4rem;
+        height: 82.5rem;
+    }
+
+    .product__image--03_1 {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 28.5rem;
+
+        img {
+            width: 100%;
+            max-width: 48rem;
+        }
+    }
+
+    .product__image--03_2 {
+        position: absolute;
+        z-index: 1;
+        top: 13.5rem;
+        left: 23.5rem;
+
+        img {
+            width: 100%;
+            max-width: 48rem;
+        }
+    }
+
+    .product__image--03_3 {
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        right: 35.5rem;
+
+        img {
+            width: 100%;
+            max-width: 36rem;
+        }
+    }
+
+    .product__credit--03 {
+        position: absolute;
+        bottom: -0.6rem;
+        right: 0;
+        transform: translateX(calc(100% + 3.5rem));
+    }
+
+    // product__image-wrap--04
+    .product__image-wrap--04 {
+        position: relative;
+        margin-top: 14.0rem;
+        text-align: center;
+    }
+
+    .product__image--04_1 {
+        img {
+            width: 100%;
+            max-width: 50rem;
+        }
+    }
+
+    .product__image--04_2 {
+        margin-top: 2.5rem;
+
+        img {
+            width: 100%;
+            max-width: 50rem;
+        }
+    }
+
+    .product__credit--04 {
+        margin-top: 2.9rem;
+
+        a {
+            margin-right: 0.6rem;
+
+            &:nth-child(3),
+            &:nth-child(6) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    // product__image-wrap--05
+    .product__image-wrap--05 {
+        position: relative;
+        margin-top: 13.2rem;
+        height: 86.5rem;
+    }
+
+    .product__image--05_1 {
+        position: absolute;
+        top: 0;
+        left: 20rem;
+
+        img {
+            width: 100%;
+            max-width: 52rem;
+        }
+    }
+
+    .product__credit--05 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(calc(100% + 2.8rem));
+
+        a {
+            margin-right: 0.6rem;
+
+            &:nth-child(3),
+            &:nth-child(6) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .product__image--05_2 {
+        position: absolute;
+        bottom: 0;
+        right: 24rem;
+
+        img {
+            width: 100%;
+            max-width: 40rem;
+        }
+    }
+
+    // product__image-wrap--06
+    .product__image-wrap--06 {
+        position: relative;
+        margin-top: 14.0rem;
+        text-align: center;
+    }
+
+    .product__image--06_1 {
+        position: relative;
+        z-index: 2;
+        img {
+            width: 100%;
+            max-width: 46rem;
+        }
+    }
+
+    .product__image--06_2 {
+        position: relative;
+        z-index: 1;
+        margin-top: -8.0rem;
+
+        img {
+            width: 100%;
+            max-width: 68rem;
+        }
+    }
+
+    .product__image--06_3 {
+        margin-top: 9.95rem;
+        margin-inline: auto;
+        width: 100%;
+        max-width: 108.8rem;
+
+        .movie {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .product__credit--06 {
+        margin-top: 2.65rem;
+
+        a {
+            margin-right: 0.6rem;
+
+            &:nth-child(3),
+            &:nth-child(7) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    // product__image-wrap--07
+    .product__image-wrap--07 {
+        position: relative;
+        margin-top: 14.0rem;
+        text-align: center;
+
+        .flex-box-07 {
+            width: 100%;
+            max-width: 94rem;
+            margin-inline: auto;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+    }
+
+    .product__image--07_1 {
+        img {
+            width: 100%;
+            max-width: 46rem;
+        }
+    }
+
+    .product__image--07_2 {
+        img {
+            width: 100%;
+            max-width: 46rem;
+        }
+    }
+
+    .product__image--07_3 {
+        margin-top: 12rem;
+        margin-inline: auto;
+        width: 100%;
+        max-width: 108.8rem;
+
+        .movie {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .product__credit--07 {
+        margin-top: 2.6rem;
+
+        a {
+            margin-right: 0.6rem;
+
+            &:nth-child(3),
+            &:nth-child(7) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    // product__image-wrap--08
+    .product__image-wrap--08 {
+        margin-top: 13.5rem;
+        text-align: center;
+    }
+
+    .product__image--08_1 {
+        img {
+            width: 100%;
+            max-width: 48rem;
+        }
+    }
+
+    .product__credit--08 {
+        margin-top: 2.6rem;
+    }
+
+    // product__image-wrap--09
+    .product__image-wrap--09 {
+        position: relative;
+        margin-top: 13.5rem;
+        text-align: center;
+    }
+
+    .product__image--09_1 {
+        img {
+            width: 100%;
+            max-width: 60rem;
+        }
+    }
+
+    .product__image--09_2 {
+        margin-top: 4.4rem;
+
+        img {
+            width: 100%;
+            max-width: 48rem;
+        }
+    }
+
+    .product__credit--09 {
+        margin-top: 2.9rem;
+
+        a {
+            margin-right: 0.6rem;
+
+            &:nth-child(2),
+            &:nth-child(5) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    // product__image-wrap--10
+    .product__image-wrap--10 {
+        position: relative;
+        margin-top: 13.5rem;
+        height: 85rem;
+    }
+
+    .product__image--10_1 {
+        position: absolute;
+        top: 0;
+        right: 20rem;
+
+        img {
+            width: 100%;
+            max-width: 58rem;
+        }
+    }
+
+    .product__credit--10 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(calc(100% + 2.8rem));
+        text-align: right;
+
+        a {
+            &:nth-child(3),
+            &:nth-child(6) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .product__image--10_2 {
+        position: absolute;
+        top: 28rem;
+        left: 22rem;
+
+        img {
+            width: 100%;
+            max-width: 44rem;
+        }
+    }
+
+    // product__image-wrap--11
+    .product__image-wrap--11 {
+        position: relative;
+        margin-top: 14.0rem;
+        text-align: center;
+    }
+
+    .product__image--11_1 {
+        img {
+            width: 100%;
+            max-width: 50rem;
+        }
+    }
+
+    .product__image--11_2 {
+        margin-top: 2.5rem;
+
+        img {
+            width: 100%;
+            max-width: 50rem;
+        }
+    }
+
+    .product__credit--11 {
+        margin-top: 2.9rem;
+
+        a {
+            margin-right: 0.6rem;
+
+            &:nth-child(3),
+            &:nth-child(7) {
+                margin-right: 0;
+            }
+        }
+    }
+
+     // product__image-wrap--12
+     .product__image-wrap--12 {
+        position: relative;
+        margin-top: 13.3rem;
+        text-align: center;
+    }
+
+    .product__image--12_1 {
+        position: relative;
+        z-index: 1;
+        img {
+            width: 100%;
+            max-width: 64rem;
+        }
+    }
+
+    .product__image--12_2 {
+        position: relative;
+        z-index: 2;
+        margin-top: -6.0rem;
+
+        img {
+            width: 100%;
+            max-width: 48rem;
+        }
+    }
+
+    .product__credit--12 {
+        margin-top: 2.75rem;
+
+        a {
+            margin-right: 0.6rem;
+
+            &:nth-child(3),
+            &:nth-child(7) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    // 全てのアイテムをチェック (ボタン)
+    .product__button {
+        margin-top: 12.4rem;
+        a {
+            margin-inline: auto;
+            display: block;
+            width: 100%;
+            max-width: 38rem;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    // STAFF (スタッフ)
+    .staff {
+        margin-top: 10.2rem;
+
+        &__title {
+            width: 5.25rem;
+            margin-inline: auto;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__member {
+            margin-top: 1.1rem;
+            text-align: center;
+
+            p {
+                font-size: 1.3rem;
+                line-height: 2;
+
+                &:last-of-type {
+                    margin-top: 2.5rem;
+                }
+            }
+        }
+    }
+}
