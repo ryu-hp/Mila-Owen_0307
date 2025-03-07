@@ -117,16 +117,25 @@ $breakpoint-sp: 767px;
 // フォント
 $font-family-main: "neue-haas-grotesk-display", sans-serif;
 
-///// main
+// スマホ時サイズ管理
+@function spSize($size) {
+    @return calc(#{$size} * (100vw / 750));
+}
+
+///// main /////
 #MO25313NEW {
     margin: 0 auto;
-    padding: 0 0 30rem 0;
+    padding: 0 0 22rem 0;
     color: #000000;
     font-weight: 400;
     font-family: $font-family-main;
     letter-spacing: 0.03em;
     overflow-x: clip;
     width: 100%;
+
+    @include mq(sp) {
+        padding: 0 0 spSize(320) 0;
+    }
 
     .sp_only {
         display: none;
@@ -140,6 +149,44 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         }
     }
 
+    // アニメーション用
+    .js-fadeIn {
+        opacity: 0 ;
+        visibility: hidden;
+        transition: opacity 2s, visibility 2s;
+    }
+    .js-fadeIn.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    .js-fadeInLeft {
+        opacity: 0 ;
+        visibility: hidden;
+        transform: translateX(80px);
+        transition: opacity 1s, visibility 1s, transform 1s;
+    }
+    .js-fadeInRight {
+        opacity: 0 ;
+        visibility: hidden;
+        transform: translateX(-80px);
+        transition: opacity 1s, visibility 1s, transform 1s;
+    }
+    .js-fadeInLeft.visible,
+    .js-fadeInRight.visible {
+        opacity: 1 ;
+        visibility: visible;
+        transform: translateX(0);
+    }
+    // .js-fadeInMv {
+    //     opacity: 0 ;
+    //     visibility: hidden;
+    //     transition: opacity 1.5s, visibility 1.5s;
+    // }
+    // .js-fadeInMv.visible {
+    //     opacity: 1 ;
+    //     visibility: visible;
+    // }
+
     // FV
     .fv {
         margin-inline: auto;
@@ -149,6 +196,10 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         a {
             display: block;
             width: 100%;
+        }
+
+        @include mq(sp) {
+            max-width: 100%;
         }
     }
 
@@ -164,6 +215,56 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             width: 100%;
             max-width: 41.5rem;
         }
+
+        @include mq(sp) {
+            margin-top: spSize(102);
+
+            img {
+                max-width: spSize(615);
+            }
+        }
+    }
+
+// -----------------------------------------------------------------
+// せりあがり実装
+// -----------------------------------------------------------------
+    .product__block--01 {
+        position: sticky;
+        top: calc(100vh - 244.2rem);
+
+        @include mq(sp) {
+            top: calc(100vh - spSize(4258));
+        }
+    }
+
+    .product__block--02 {
+        background-color: #fff;
+        position: sticky;
+        top: calc(100vh - 417.2rem);
+        padding-bottom: 14.0rem;
+
+        @include mq(sp) {
+            top: calc(100vh - spSize(7053));
+            padding-bottom: spSize(138);
+        }
+    }
+
+    .product__block--03 {
+        position: relative;
+        background-color: #fff;
+        position: sticky;
+        top: calc(100vh - 458.8rem);
+        padding-bottom: 13.5rem;
+
+        @include mq(sp) {
+            top: calc(100vh - spSize(7539));
+            padding-bottom: spSize(138);
+        }
+    }
+
+    .product__block--04 {
+        position: relative;
+        background-color: #fff;
     }
 
 // -----------------------------------------------------------------
@@ -178,6 +279,21 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
     .product__image {
         & > a {
             display: block;
+            width: fit-content;
+            margin-inline: auto;
+        }
+
+        a {
+            &:hover {
+                opacity: 0.8;
+                transition: 0.3s
+            }
+        }
+
+        .movie {
+            a {
+                transition: 0.3s;
+            }
         }
     }
 
@@ -185,6 +301,10 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
     .product__credit {
         font-size: 1.3rem;
         line-height: 2;
+
+        @include mq(sp) {
+            font-size: spSize(23);
+        }
     }
 
 // -----------------------------------------------------------------
@@ -195,27 +315,14 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         position: relative;
         margin-top: 15.5rem;
         height: 163.4rem;
-    }
 
-    .product__image--01_1 {
-        position: absolute;
-        top: 22.5rem;
-        left: 22.5rem;
-
-        img {
-            width: 100%;
-            max-width: 54rem;
+        @include mq(sp) {
+            margin-top: spSize(142);
+            height: auto;
         }
     }
 
-    .product__credit--01 {
-        position: absolute;
-        bottom: -0.6rem;
-        right: 0;
-        transform: translateX(calc(100% + 3.5rem));
-    }
-
-    .product__image--01_2 {
+    .product__image--01_1 {
         position: absolute;
         top: 0;
         right: 23.5rem;
@@ -224,6 +331,35 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             width: 100%;
             max-width: 36rem;
         }
+
+        @include mq(sp) {
+            position: static;
+
+            img {
+                width: 100%;
+                max-width: spSize(660);
+            }
+        }
+    }
+
+    .product__image--01_2 {
+        position: absolute;
+        top: 22.5rem;
+        left: 22.5rem;
+
+        img {
+            width: 100%;
+            max-width: 54rem;
+        }
+
+        @include mq(sp) {
+            position: static;
+            margin-top: spSize(45);
+
+            img {
+                max-width: 100%;
+            }
+        }
     }
 
     .product__image--01_3 {
@@ -231,11 +367,53 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 108.8rem;
+        width: 100%;
+        max-width: 108.8rem;
 
         .movie {
             width: 100%;
-            height: auto;
+
+            video {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @include mq(sp) {
+            position: static;
+            margin-top: spSize(78);
+            transform: none;
+
+            .movie {
+                margin-inline: auto;
+                width: spSize(630);
+
+                video {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .product__credit--01 {
+        position: absolute;
+        top: 75rem;
+        right: 47.8rem;
+
+        @include mq(sp) {
+            position: static;
+            margin-top: spSize(40);
+            text-align: center;
+
+            a {
+                margin-right: spSize(14);
+
+                &:nth-of-type(3),
+                &:nth-of-type(6) {
+                    margin-right: 0;
+                }
+            }
         }
     }
 
@@ -244,21 +422,43 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         position: relative;
         margin-top: 13.8rem;
         text-align: center;
+
+        // せりあがり仕様のため、分割
+        &.--part2 {
+            margin-top: 0;
+        }
+
+        @include mq(sp) {
+            margin-top: spSize(138);
+        }
     }
 
     .product__image--02_1 {
+        padding-bottom: 4.5rem;
+
         img {
             width: 100%;
             max-width: 50rem;
         }
+
+        @include mq(sp) {
+            img {
+                max-width: 100%;
+            }
+        }
     }
 
     .product__image--02_2 {
-        margin-top: 4.5rem;
 
         img {
             width: 100%;
             max-width: 40rem;
+        }
+
+        @include mq(sp) {
+            img {
+                max-width: spSize(680);
+            }
         }
     }
 
@@ -273,6 +473,19 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
                 margin-right: 0;
             }
         }
+
+        @include mq(sp) {
+            margin-top: spSize(38);
+
+            a {
+                margin-right: spSize(14);
+
+                &:nth-child(3),
+                &:nth-child(7) {
+                    margin-right: 0;
+                }
+            }
+        }
     }
 
     // product__image-wrap--03
@@ -280,6 +493,11 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         position: relative;
         margin-top: 13.4rem;
         height: 82.5rem;
+
+        @include mq(sp) {
+            margin-top: spSize(138);
+            height: spSize(1697);
+        }
     }
 
     .product__image--03_1 {
@@ -291,6 +509,14 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         img {
             width: 100%;
             max-width: 48rem;
+        }
+
+        @include mq(sp) {
+            right: 0;
+
+            img {
+                max-width: spSize(610);
+            }
         }
     }
 
@@ -304,6 +530,15 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             width: 100%;
             max-width: 48rem;
         }
+
+        @include mq(sp) {
+            top: spSize(325);
+            left: 0;
+
+            img {
+                max-width: spSize(560);
+            }
+        }
     }
 
     .product__image--03_3 {
@@ -316,6 +551,15 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             width: 100%;
             max-width: 36rem;
         }
+
+        @include mq(sp) {
+            bottom: 0;
+            right: spSize(55);
+
+            img {
+                max-width: spSize(440);
+            }
+        }
     }
 
     .product__credit--03 {
@@ -323,6 +567,22 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         bottom: -0.6rem;
         right: 0;
         transform: translateX(calc(100% + 3.5rem));
+
+        @include mq(sp) {
+            position: static;
+            margin-top: spSize(40);
+            transform: none;
+
+            a {
+                margin-right: spSize(14);
+
+                &:nth-of-type(2),
+                &:nth-of-type(4),
+                &:nth-of-type(6) {
+                    margin-right: 0;
+                }
+            }
+        }
     }
 
     // product__image-wrap--04
@@ -330,12 +590,23 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         position: relative;
         margin-top: 14.0rem;
         text-align: center;
+
+        @include mq(sp) {
+            margin-top: spSize(138);
+        }
     }
 
     .product__image--04_1 {
         img {
             width: 100%;
             max-width: 50rem;
+        }
+
+        @include mq(sp) {
+
+            img {
+                max-width: spSize(640);
+            }
         }
     }
 
@@ -345,6 +616,14 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         img {
             width: 100%;
             max-width: 50rem;
+        }
+
+        @include mq(sp) {
+            margin-top: spSize(40);
+
+            img {
+                max-width: 100%;
+            }
         }
     }
 
@@ -359,6 +638,19 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
                 margin-right: 0;
             }
         }
+
+        @include mq(sp) {
+            margin-top: spSize(40);
+
+            a {
+                margin-right: spSize(14);
+    
+                &:nth-child(3),
+                &:nth-child(6) {
+                    margin-right: 0;
+                }
+            }
+        }
     }
 
     // product__image-wrap--05
@@ -366,6 +658,11 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         position: relative;
         margin-top: 13.2rem;
         height: 86.5rem;
+
+        @include mq(sp) {
+            margin-top: spSize(138);
+            height: auto;
+        }
     }
 
     .product__image--05_1 {
@@ -377,20 +674,12 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             width: 100%;
             max-width: 52rem;
         }
-    }
 
-    .product__credit--05 {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transform: translateY(calc(100% + 2.8rem));
+        @include mq(sp) {
+            position: static;
 
-        a {
-            margin-right: 0.6rem;
-
-            &:nth-child(3),
-            &:nth-child(6) {
-                margin-right: 0;
+            img {
+                max-width: 100%;
             }
         }
     }
@@ -404,12 +693,54 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             width: 100%;
             max-width: 40rem;
         }
+
+        @include mq(sp) {
+            position: static;
+            margin-top: spSize(45);
+
+            & > a {
+                margin-left: 0;
+            }
+
+            img {
+                max-width: spSize(640);
+            }
+        }
+    }
+
+    .product__credit--05 {
+        position: absolute;
+        top: 67.8rem;
+        left: 20rem;
+
+        a {
+            margin-right: 0.6rem;
+
+            &:nth-child(3),
+            &:nth-child(6) {
+                margin-right: 0;
+            }
+        }
+
+        @include mq(sp) {
+            position: static;
+            margin-top: spSize(40);
+            padding-left: spSize(50);
+
+            a {
+                margin-right: spSize(14);
+
+                &:nth-child(3),
+                &:nth-child(6) {
+                    margin-right: 0;
+                }
+            }
+        }
     }
 
     // product__image-wrap--06
     .product__image-wrap--06 {
         position: relative;
-        margin-top: 14.0rem;
         text-align: center;
     }
 
@@ -419,6 +750,12 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         img {
             width: 100%;
             max-width: 46rem;
+        }
+
+        @include mq(sp) {
+            img {
+                max-width: spSize(640);
+            }
         }
     }
 
@@ -431,6 +768,14 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             width: 100%;
             max-width: 68rem;
         }
+
+        @include mq(sp) {
+            margin-top: spSize(-65);
+
+            img {
+                max-width: 100%;
+            }
+        }
     }
 
     .product__image--06_3 {
@@ -441,7 +786,26 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
 
         .movie {
             width: 100%;
-            height: auto;
+
+            video {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @include mq(sp) {
+            margin-top: spSize(79);
+
+            .movie {
+                width: 100%;
+                max-width: spSize(630);
+                margin-inline: auto;
+
+                video {
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
     }
 
@@ -451,9 +815,22 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         a {
             margin-right: 0.6rem;
 
-            &:nth-child(3),
-            &:nth-child(7) {
+            &:nth-of-type(3),
+            &:nth-of-type(6) {
                 margin-right: 0;
+            }
+        }
+
+        @include mq(sp) {
+            margin-top: spSize(38);
+
+            a {
+                margin-right: spSize(14);
+
+                &:nth-of-type(3),
+                &:nth-of-type(6) {
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -472,6 +849,17 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             justify-content: center;
             gap: 2rem;
         }
+
+        @include mq(sp) {
+            margin-top: spSize(140);
+
+            .flex-box-07 {
+                width: 100%;
+                max-width: spSize(700);
+                flex-direction: column;
+                gap: spSize(20);
+            }
+        }
     }
 
     .product__image--07_1 {
@@ -479,12 +867,51 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             width: 100%;
             max-width: 46rem;
         }
+
+        @include mq(sp) {
+            img {
+                max-width: 100%;
+            }
+        }
     }
 
     .product__image--07_2 {
-        img {
-            width: 100%;
-            max-width: 46rem;
+        position: relative;
+
+        a {
+            position: relative;
+
+            img {
+                width: 100%;
+                max-width: 46rem;
+                transition: opacity 0.3s ease-in-out;
+        
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                }
+            }
+        
+            &:hover {
+                img:first-child {
+                    opacity: 0;
+                }
+        
+                img:nth-child(2) {
+                    opacity: 1;
+                }
+            }
+        }
+
+
+        @include mq(sp) {
+            a {
+                img {
+                    max-width: 100%;
+                }
+            }
         }
     }
 
@@ -496,7 +923,16 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
 
         .movie {
             width: 100%;
-            height: auto;
+
+            video {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @include mq(sp) {
+            margin-top: spSize(80);
+            max-width: spSize(630);
         }
     }
 
@@ -506,50 +942,117 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         a {
             margin-right: 0.6rem;
 
-            &:nth-child(3),
-            &:nth-child(7) {
+            &:nth-of-type(3),
+            &:nth-of-type(6) {
                 margin-right: 0;
+            }
+        }
+
+        @include mq(sp) {
+            margin-top: spSize(38);
+
+            a {
+                margin-right: spSize(14);
+
+                &:nth-of-type(3),
+                &:nth-of-type(6) {
+                    margin-right: 0;
+                }
             }
         }
     }
 
     // product__image-wrap--08
     .product__image-wrap--08 {
+        position: relative;
         margin-top: 13.5rem;
         text-align: center;
+
+        @include mq(sp) {
+            margin-top: spSize(138);
+        }
     }
 
     .product__image--08_1 {
+
         img {
             width: 100%;
             max-width: 48rem;
+        }
+
+        @include mq(sp) {
+            img {
+                max-width: 100%;
+            }
         }
     }
 
     .product__credit--08 {
         margin-top: 2.6rem;
+
+        @include mq(sp) {
+            margin-top: spSize(38);
+        }
     }
 
     // product__image-wrap--09
     .product__image-wrap--09 {
         position: relative;
-        margin-top: 13.5rem;
         text-align: center;
     }
 
     .product__image--09_1 {
+
         img {
             width: 100%;
             max-width: 60rem;
+        }
+
+        @include mq(sp) {
+            img {
+                max-width: 100%;
+            }
         }
     }
 
     .product__image--09_2 {
         margin-top: 4.4rem;
 
-        img {
-            width: 100%;
-            max-width: 48rem;
+        a {
+            position: relative;
+
+            img {
+                width: 100%;
+                max-width: 48rem;
+                transition: opacity 0.3s ease-in-out;
+        
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                }
+            }
+        
+            &:hover {
+                img:first-child {
+                    opacity: 0;
+                }
+        
+                img:nth-child(2) {
+                    opacity: 1;
+                }
+            }
+        }
+
+        @include mq(sp) {
+            margin-top: spSize(45);
+
+            a {
+                img {
+                    max-width: spSize(640);
+                }
+            }
         }
     }
 
@@ -559,9 +1062,22 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         a {
             margin-right: 0.6rem;
 
-            &:nth-child(2),
-            &:nth-child(5) {
+            &:nth-of-type(2),
+            &:nth-of-type(4) {
                 margin-right: 0;
+            }
+        }
+
+        @include mq(sp) {
+            margin-top: spSize(38);
+
+            a {
+                margin-right: spSize(14);
+    
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -571,6 +1087,11 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         position: relative;
         margin-top: 13.5rem;
         height: 85rem;
+
+        @include mq(sp) {
+            margin-top: spSize(138);
+            height: auto;
+        }
     }
 
     .product__image--10_1 {
@@ -582,19 +1103,12 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             width: 100%;
             max-width: 58rem;
         }
-    }
 
-    .product__credit--10 {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        transform: translateY(calc(100% + 2.8rem));
-        text-align: right;
+        @include mq(sp) {
+            position: static;
 
-        a {
-            &:nth-child(3),
-            &:nth-child(6) {
-                margin-right: 0;
+            img {
+                max-width: spSize(700);
             }
         }
     }
@@ -608,19 +1122,68 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             width: 100%;
             max-width: 44rem;
         }
+
+        @include mq(sp) {
+            position: static;
+            margin-top: spSize(45);
+
+            & > a {
+                &.visible {
+                    margin-left: 0;
+                }
+            }
+
+            img {
+                max-width: spSize(620);
+            }
+        }
     }
+
+    .product__credit--10 {
+        position: absolute;
+        bottom: -0.6rem;
+        right: 20rem;
+        text-align: right;
+
+        @include mq(sp) {
+            position: static;
+            margin-top: spSize(38);
+            padding-left: spSize(50);
+            text-align: left;
+
+            a {
+                margin-right: spSize(13);
+
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
 
     // product__image-wrap--11
     .product__image-wrap--11 {
         position: relative;
         margin-top: 14.0rem;
         text-align: center;
+
+        @include mq(sp) {
+            margin-top: spSize(138);
+        }
     }
 
     .product__image--11_1 {
         img {
             width: 100%;
             max-width: 50rem;
+        }
+
+        @include mq(sp) {
+            img {
+                max-width: spSize(680);
+            }
         }
     }
 
@@ -631,6 +1194,14 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             width: 100%;
             max-width: 50rem;
         }
+
+        @include mq(sp) {
+            margin-top: spSize(20);
+
+            img {
+                max-width: spSize(680);
+            }
+        }
     }
 
     .product__credit--11 {
@@ -639,9 +1210,22 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         a {
             margin-right: 0.6rem;
 
-            &:nth-child(3),
-            &:nth-child(7) {
+            &:nth-of-type(3),
+            &:nth-of-type(6) {
                 margin-right: 0;
+            }
+        }
+
+        @include mq(sp) {
+            margin-top: spSize(40);
+
+            a {
+                margin-right: spSize(14);
+    
+                &:nth-of-type(3),
+                &:nth-of-type(6) {
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -651,14 +1235,25 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         position: relative;
         margin-top: 13.3rem;
         text-align: center;
+
+        @include mq(sp) {
+            margin-top: spSize(138);
+        }
     }
 
     .product__image--12_1 {
         position: relative;
         z-index: 1;
+
         img {
             width: 100%;
             max-width: 64rem;
+        }
+
+        @include mq(sp) {
+            img {
+                max-width: 100%;
+            }
         }
     }
 
@@ -671,6 +1266,14 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             width: 100%;
             max-width: 48rem;
         }
+
+        @include mq(sp) {
+            margin-top: spSize(-65);
+
+            img {
+                max-width: spSize(640);
+            }
+        }
     }
 
     .product__credit--12 {
@@ -679,9 +1282,22 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         a {
             margin-right: 0.6rem;
 
-            &:nth-child(3),
-            &:nth-child(7) {
+            &:nth-of-type(3),
+            &:nth-of-type(6) {
                 margin-right: 0;
+            }
+        }
+
+        @include mq(sp) {
+            margin-top: spSize(40);
+
+            a {
+                margin-right: spSize(14);
+    
+                &:nth-of-type(3),
+                &:nth-of-type(6) {
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -694,10 +1310,23 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             display: block;
             width: 100%;
             max-width: 38rem;
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+                opacity: 0.7;
+            }
 
             img {
                 width: 100%;
                 height: auto;
+            }
+        }
+
+        @include mq(sp) {
+            margin-top: spSize(170);
+
+            a {
+                max-width: spSize(675);
             }
         }
     }
@@ -726,6 +1355,26 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
 
                 &:last-of-type {
                     margin-top: 2.5rem;
+                }
+            }
+        }
+
+        @include mq(sp) {
+            margin-top: spSize(140);
+
+            &__title {
+                width: spSize(88);
+            }
+
+            &__member {
+                margin-top: spSize(25);
+
+                p {
+                    font-size: spSize(23);
+    
+                    &:last-of-type {
+                        margin-top: spSize(46);
+                    }
                 }
             }
         }
