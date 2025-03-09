@@ -37,8 +37,92 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
     @return calc(#{$size} * (100vw / 750));
 }
 
+
 ///// main /////
 #MO25313NEW {
+    // reset css
+    *,
+    *::before,
+    *::after {
+    box-sizing: border-box;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol,
+    dl,
+    li,
+    dt,
+    dd,
+    p,
+    div,
+    span,
+    img,
+    a,
+    table,
+    tr,
+    th,
+    td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: baseline;
+    }
+
+    header,
+    footer,
+    nav,
+    section,
+    article,
+    main,
+    aside,
+    figure,
+    figcaption {
+    display: block;
+    }
+
+    ol,
+    ul {
+    list-style: none;
+    }
+
+    img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    }
+
+    a {
+    color: inherit;
+    text-decoration: none;
+    }
+
+    button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    font: inherit;
+    }
+
+    input,
+    select,
+    textarea {
+    font: inherit;
+    color: inherit;
+    vertical-align: top;
+    }
+    ///// ここまで reset css /////
+
     margin: 0 auto;
     padding: 0 0 22rem 0;
     color: #000000;
@@ -155,11 +239,11 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
     .product__block--02 {
         background-color: #fff;
         position: sticky;
-        top: calc(100vh - 417.2rem - 500px); //固定値500px は GSAP 用
+        top: calc(100vh - 417.2rem - 1000px); //固定値1000px は GSAP 用
         padding-bottom: 14.0rem;
 
         @include mq(sp) {
-            top: calc(100vh - spSize(7053) - 500px);
+            top: calc(100vh - spSize(7053) - 1000px);
             padding-bottom: spSize(138);
         }
     }
@@ -200,9 +284,13 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
 
         a {
             &:hover {
-                opacity: 0.8;
+                opacity: 0.7;
                 transition: 0.3s
             }
+        }
+
+        img {
+            height: auto;
         }
 
         .movie {
