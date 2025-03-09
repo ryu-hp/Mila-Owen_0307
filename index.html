@@ -8,6 +8,90 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <style>
+        *,
+        *::before,
+        *::after {
+        box-sizing: border-box;
+        }
+
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        ul,
+        ol,
+        dl,
+        li,
+        dt,
+        dd,
+        p,
+        div,
+        span,
+        img,
+        a,
+        table,
+        tr,
+        th,
+        td {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-weight: normal;
+        font-size: 100%;
+        vertical-align: baseline;
+        }
+
+        header,
+        footer,
+        nav,
+        section,
+        article,
+        main,
+        aside,
+        figure,
+        figcaption {
+        display: block;
+        }
+
+        ol,
+        ul {
+        list-style: none;
+        }
+
+        img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        }
+
+        a {
+        color: inherit;
+        text-decoration: none;
+        }
+
+        button {
+        margin: 0;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        cursor: pointer;
+        font: inherit;
+        }
+
+        input,
+        select,
+        textarea {
+        font: inherit;
+        color: inherit;
+        vertical-align: top;
+        }
+
+
         html {
         font-size: 62.5% ;
         }
@@ -103,33 +187,35 @@
                     </div>
                 </div>
             
-                <div class="product__item product__image-wrap product__image-wrap--03">
-                    <div class="product__image product__image--03_1">
-                        <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW06" class="js-fadeIn">
-                            <picture>
-                                <source srcset="img/250217_Mila_Owen_08_0502_sp.jpg" media="(max-width: 768px)">
-                                <img src="img/250217_Mila_Owen_08_0502.jpg" width="480" height="270" alt="" loading="lazy">
-                            </picture>
-                        </a>
-                    </div>
-            
-                    <div class="product__image product__image--03_2">
-                        <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW06" class="js-fadeIn">
-                        <img src="img/250217_Mila_Owen_08_0527.jpg" width="480" height="600" alt="" loading="lazy">
-                        </a>
-                    </div>
-            
-                    <div class="product__image product__image--03_3">
-                        <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW06" class="js-fadeIn">
-                        <img src="img/250217_Mila_Owen_08_0504.jpg" width="360" height="450" alt="" loading="lazy">
-                        </a>
-                        <div class="product__credit product__credit--03">
-                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WCT251084">Camisole 5,500yen</a><br class="pc_only">
-                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WNT251048">Knit tops 5,940yen</a><br>
-                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WNT251047">Knit tops 5,940yen</a><br class="pc_only">
-                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WFP251131">Pants 9,900yen</a><br>
-                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WGA251571">Ear cuff 4,950yen</a><br class="pc_only">
-                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WGS251524">Sandals 12,100yen</a>
+                <div class="gsap-area">
+                    <div class="product__item product__image-wrap product__image-wrap--03">
+                        <div class="product__image product__image--03_1">
+                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW06">
+                                <picture>
+                                    <source srcset="img/250217_Mila_Owen_08_0502_sp.jpg" media="(max-width: 768px)">
+                                    <img src="img/250217_Mila_Owen_08_0502.jpg" width="480" height="270" alt="">
+                                </picture>
+                            </a>
+                        </div>
+                
+                        <div class="product__image product__image--03_2">
+                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW06">
+                                <img src="img/250217_Mila_Owen_08_0527.jpg" width="480" height="600" alt="">
+                            </a>
+                        </div>
+                
+                        <div class="product__image product__image--03_3">
+                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW06">
+                                <img src="img/250217_Mila_Owen_08_0504.jpg" width="360" height="450" alt="">
+                            </a>
+                            <div class="product__credit product__credit--03">
+                                <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WCT251084">Camisole 5,500yen</a><br class="pc_only">
+                                <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WNT251048">Knit tops 5,940yen</a><br>
+                                <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WNT251047">Knit tops 5,940yen</a><br class="pc_only">
+                                <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WFP251131">Pants 9,900yen</a><br>
+                                <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WGA251571">Ear cuff 4,950yen</a><br class="pc_only">
+                                <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WGS251524">Sandals 12,100yen</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -379,7 +465,10 @@
 
         </article>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="./js/script.js" defer></script>
+
     </body>
 </html>
