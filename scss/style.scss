@@ -124,7 +124,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
 
     // Title
     .title {
-        margin-top: 8.45rem;
+        margin-top: 8.6rem;
         text-align: center;
         img {
             width: 100%;
@@ -228,7 +228,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
     // product__image-wrap--01
     .product__image-wrap--01 {
         position: relative;
-        margin-top: 15.5rem;
+        margin-top: 15.3rem;
         height: 163.4rem;
 
         @include mq(sp) {
@@ -313,8 +313,8 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
 
     .product__credit--01 {
         position: absolute;
-        top: 75rem;
-        right: 47.8rem;
+        top: 75.1rem;
+        right: 47.6rem;
 
         @include mq(sp) {
             position: static;
