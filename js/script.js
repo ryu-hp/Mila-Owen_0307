@@ -29,7 +29,7 @@ $(window).on('load', function () {
         // toggleActions: "play none none reverse",
         scrub: true,
         pin: true,
-        markers: true,
+        markers: false,
       }
     });
 
