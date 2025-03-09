@@ -18,12 +18,12 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
 <link rel="stylesheet" href='<%= Constants.PATH_ROOT %>Css/lp_common.css?ver=<%: System.IO.File.GetLastWriteTime(HttpContext.Current.Server.MapPath(Constants.PATH_ROOT + @"Css/lp_common.css")).ToString("yyMMddHHmmss") %>'>
 <link rel="stylesheet" href="https://use.typekit.net/jth3uwv.css">
 <%-- コンテンツ部分用CSS読み込みここから --%>
-<link rel="stylesheet" href="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/css/style.css?0309-14:41">
+<link rel="stylesheet" href="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/css/style.css?0309-16:59">
 <%-- コンテンツ部分用CSS読み込みここまで --%>
 
 <%-- ▽ 編集エリア ▽ --%>
 <div class="bredlist lp">
-  <a href="<%= Constants.PATH_ROOT %>">Mila Owen（ミラ オーウェン）</a> &gt;　25'SPRING JOURNAL
+  <a href="<%= Constants.PATH_ROOT %>">Mila Owen（ミラ・オーウェン）</a> &gt;　25'SPRING JOURNAL
 </div>
 
 <article class="main-contents" id="MO25313NEW" >
