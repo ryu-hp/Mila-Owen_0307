@@ -133,7 +133,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
     width: 100%;
 
     @include mq(sp) {
-        padding: 0 0 spSize(320) 0;
+        padding: 0 0 spSize(305) 0;
     }
 
     .sp_only {
@@ -284,9 +284,17 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         }
 
         a {
+            cursor: pointer;
             &:hover {
                 opacity: 0.7;
                 transition: 0.3s
+                
+            }
+            @include mq(sp) {
+                &:hover {
+                    opacity: 1;   
+                    transition: none;
+                }
             }
         }
 
@@ -308,6 +316,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
 
         @include mq(sp) {
             font-size: spSize(23);
+            letter-spacing: 0.016em;
         }
     }
 
@@ -648,7 +657,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         }
 
         @include mq(sp) {
-            margin-top: spSize(40);
+            margin-top: spSize(38);
 
             a {
                 margin-right: spSize(14);
@@ -668,7 +677,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         height: 86.5rem;
 
         @include mq(sp) {
-            margin-top: spSize(138);
+            margin-top: spSize(139);
             height: auto;
         }
     }
@@ -732,7 +741,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
 
         @include mq(sp) {
             position: static;
-            margin-top: spSize(40);
+            margin-top: spSize(39);
             padding-left: spSize(50);
 
             a {
@@ -830,7 +839,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         }
 
         @include mq(sp) {
-            margin-top: spSize(38);
+            margin-top: spSize(40);
 
             a {
                 margin-right: spSize(14);
@@ -859,7 +868,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         }
 
         @include mq(sp) {
-            margin-top: spSize(140);
+            margin-top: spSize(138);
 
             .flex-box-07 {
                 width: 100%;
@@ -977,7 +986,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         text-align: center;
 
         @include mq(sp) {
-            margin-top: spSize(138);
+            margin-top: spSize(139);
         }
     }
 
@@ -1054,7 +1063,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         }
 
         @include mq(sp) {
-            margin-top: spSize(45);
+            margin-top: spSize(46);
 
             a {
                 img {
@@ -1077,7 +1086,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         }
 
         @include mq(sp) {
-            margin-top: spSize(38);
+            margin-top: spSize(39);
 
             a {
                 margin-right: spSize(14);
@@ -1155,7 +1164,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
 
         @include mq(sp) {
             position: static;
-            margin-top: spSize(38);
+            margin-top: spSize(39);
             padding-left: spSize(50);
             text-align: left;
 
@@ -1225,7 +1234,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         }
 
         @include mq(sp) {
-            margin-top: spSize(40);
+            margin-top: spSize(39);
 
             a {
                 margin-right: spSize(14);
@@ -1297,7 +1306,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         }
 
         @include mq(sp) {
-            margin-top: spSize(40);
+            margin-top: spSize(39);
 
             a {
                 margin-right: spSize(14);
@@ -1331,7 +1340,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         }
 
         @include mq(sp) {
-            margin-top: spSize(170);
+            margin-top: spSize(169);
 
             a {
                 max-width: spSize(675);
@@ -1360,7 +1369,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             p {
                 font-size: 1.3rem;
                 line-height: 2;
-
+                letter-spacing: 0.02em;
                 &:last-of-type {
                     margin-top: 2.5rem;
                 }
@@ -1368,14 +1377,14 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         }
 
         @include mq(sp) {
-            margin-top: spSize(140);
+            margin-top: spSize(144);
 
             &__title {
                 width: spSize(88);
             }
 
             &__member {
-                margin-top: spSize(25);
+                margin-top: spSize(23);
 
                 p {
                     font-size: spSize(23);

@@ -100,7 +100,7 @@
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW {
-    padding: 0 0 calc(320 * 0.1333333333vw) 0;
+    padding: 0 0 calc(305 * 0.1333333333vw) 0;
   }
 }
 #MO25313NEW .sp_only {
@@ -237,10 +237,20 @@
   width: fit-content;
   margin-inline: auto;
 }
+#MO25313NEW .product__image a {
+  cursor: pointer;
+}
 #MO25313NEW .product__image a:hover {
   opacity: 0.7;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+@media screen and (max-width: 767px) {
+  #MO25313NEW .product__image a:hover {
+    opacity: 1;
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 #MO25313NEW .product__image img {
   height: auto;
@@ -256,6 +266,7 @@
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__credit {
     font-size: calc(23 * 0.1333333333vw);
+    letter-spacing: 0.016em;
   }
 }
 #MO25313NEW .product__image-wrap--01 {
@@ -545,7 +556,7 @@
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__credit--04 {
-    margin-top: calc(40 * 0.1333333333vw);
+    margin-top: calc(38 * 0.1333333333vw);
   }
   #MO25313NEW .product__credit--04 a {
     margin-right: calc(14 * 0.1333333333vw);
@@ -561,7 +572,7 @@
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__image-wrap--05 {
-    margin-top: calc(138 * 0.1333333333vw);
+    margin-top: calc(139 * 0.1333333333vw);
     height: auto;
   }
 }
@@ -617,7 +628,7 @@
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__credit--05 {
     position: static;
-    margin-top: calc(40 * 0.1333333333vw);
+    margin-top: calc(39 * 0.1333333333vw);
     padding-left: calc(50 * 0.1333333333vw);
   }
   #MO25313NEW .product__credit--05 a {
@@ -699,7 +710,7 @@
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__credit--06 {
-    margin-top: calc(38 * 0.1333333333vw);
+    margin-top: calc(40 * 0.1333333333vw);
   }
   #MO25313NEW .product__credit--06 a {
     margin-right: calc(14 * 0.1333333333vw);
@@ -727,7 +738,7 @@
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__image-wrap--07 {
-    margin-top: calc(140 * 0.1333333333vw);
+    margin-top: calc(138 * 0.1333333333vw);
   }
   #MO25313NEW .product__image-wrap--07 .flex-box-07 {
     width: 100%;
@@ -823,7 +834,7 @@
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__image-wrap--08 {
-    margin-top: calc(138 * 0.1333333333vw);
+    margin-top: calc(139 * 0.1333333333vw);
   }
 }
 #MO25313NEW .product__image--08_1 img {
@@ -882,7 +893,7 @@
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__image--09_2 {
-    margin-top: calc(45 * 0.1333333333vw);
+    margin-top: calc(46 * 0.1333333333vw);
   }
   #MO25313NEW .product__image--09_2 a img {
     max-width: calc(640 * 0.1333333333vw);
@@ -899,7 +910,7 @@
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__credit--09 {
-    margin-top: calc(38 * 0.1333333333vw);
+    margin-top: calc(39 * 0.1333333333vw);
   }
   #MO25313NEW .product__credit--09 a {
     margin-right: calc(14 * 0.1333333333vw);
@@ -966,7 +977,7 @@
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__credit--10 {
     position: static;
-    margin-top: calc(38 * 0.1333333333vw);
+    margin-top: calc(39 * 0.1333333333vw);
     padding-left: calc(50 * 0.1333333333vw);
     text-align: left;
   }
@@ -1022,7 +1033,7 @@
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__credit--11 {
-    margin-top: calc(40 * 0.1333333333vw);
+    margin-top: calc(39 * 0.1333333333vw);
   }
   #MO25313NEW .product__credit--11 a {
     margin-right: calc(14 * 0.1333333333vw);
@@ -1082,7 +1093,7 @@
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__credit--12 {
-    margin-top: calc(40 * 0.1333333333vw);
+    margin-top: calc(39 * 0.1333333333vw);
   }
   #MO25313NEW .product__credit--12 a {
     margin-right: calc(14 * 0.1333333333vw);
@@ -1111,7 +1122,7 @@
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__button {
-    margin-top: calc(170 * 0.1333333333vw);
+    margin-top: calc(169 * 0.1333333333vw);
   }
   #MO25313NEW .product__button a {
     max-width: calc(675 * 0.1333333333vw);
@@ -1135,19 +1146,20 @@
 #MO25313NEW .staff__member p {
   font-size: 1.3rem;
   line-height: 2;
+  letter-spacing: 0.02em;
 }
 #MO25313NEW .staff__member p:last-of-type {
   margin-top: 2.5rem;
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .staff {
-    margin-top: calc(140 * 0.1333333333vw);
+    margin-top: calc(144 * 0.1333333333vw);
   }
   #MO25313NEW .staff__title {
     width: calc(88 * 0.1333333333vw);
   }
   #MO25313NEW .staff__member {
-    margin-top: calc(25 * 0.1333333333vw);
+    margin-top: calc(23 * 0.1333333333vw);
   }
   #MO25313NEW .staff__member p {
     font-size: calc(23 * 0.1333333333vw);

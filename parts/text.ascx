@@ -16,14 +16,14 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
 --%>
 <%-- ▽ 編集可能領域：コンテンツ ▽ --%>
 <link rel="stylesheet" href='<%= Constants.PATH_ROOT %>Css/lp_common.css?ver=<%: System.IO.File.GetLastWriteTime(HttpContext.Current.Server.MapPath(Constants.PATH_ROOT + @"Css/lp_common.css")).ToString("yyMMddHHmmss") %>'>
-<link rel="stylesheet" href="https://use.typekit.net/jth3uwv.css">
 <%-- コンテンツ部分用CSS読み込みここから --%>
-<link rel="stylesheet" href="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/css/style.css?0309-16:59">
+<link rel="stylesheet" href="https://use.typekit.net/jth3uwv.css">
+<link rel="stylesheet" href="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/css/style.css?0309-17:59">
 <%-- コンテンツ部分用CSS読み込みここまで --%>
 
 <%-- ▽ 編集エリア ▽ --%>
 <div class="bredlist lp">
-  <a href="<%= Constants.PATH_ROOT %>">Mila Owen（ミラ・オーウェン）</a> &gt;　25'SPRING JOURNAL
+    <a href="<%= Constants.PATH_ROOT %>">Mila Owen（ミラ オーウェン）</a> &gt;　25'SPRING JOURNAL
 </div>
 
 <article class="main-contents" id="MO25313NEW" >
@@ -357,7 +357,7 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
       </div>
   
       <div class="product__button">
-          <a href="http://usagi-online.com/s/YYMMDDXXX/search?link=officialwe%EF%BD%82">
+          <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEWALL">
               <picture>
                   <source srcset="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/button_sp.jpg" media="(max-width: 768px)">
                   <img src="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/button.jpg" alt="全てのアイテムをチェック" width="380" height="64">
