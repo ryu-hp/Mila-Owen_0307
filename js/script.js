@@ -25,7 +25,7 @@ $(window).on('load', function () {
       scrollTrigger: {
         trigger: ".gsap-area",
         start: "top top",
-        end: "500px top",
+        end: "1000px top",
         // toggleActions: "play none none reverse",
         scrub: true,
         pin: true,
@@ -36,19 +36,19 @@ $(window).on('load', function () {
     // 表示される順番：.product__image--03_2 → .product__image--03_1 → .product__image--03_3
     tl.from(".gsap-area .product__image-wrap--03 .product__image--03_2", {
       opacity: 0,
-      x: -50,
+      x: -70,
       duration: 3,
       ease: "power2.out"
     })
     .from(".gsap-area .product__image-wrap--03 .product__image--03_1", {
       opacity: 0,
-      x: -50,
+      x: -70,
       duration: 3,
       ease: "power2.out"
     })
     .from(".gsap-area .product__image-wrap--03 .product__image--03_3", {
       opacity: 0,
-      x: -50,
+      x: -70,
       duration: 3,
       ease: "power2.out"
     });

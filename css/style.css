@@ -23,6 +23,81 @@
   overflow-x: clip;
   width: 100%;
 }
+#MO25313NEW *,
+#MO25313NEW *::before,
+#MO25313NEW *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#MO25313NEW h1,
+#MO25313NEW h2,
+#MO25313NEW h3,
+#MO25313NEW h4,
+#MO25313NEW h5,
+#MO25313NEW h6,
+#MO25313NEW ul,
+#MO25313NEW ol,
+#MO25313NEW dl,
+#MO25313NEW li,
+#MO25313NEW dt,
+#MO25313NEW dd,
+#MO25313NEW p,
+#MO25313NEW div,
+#MO25313NEW span,
+#MO25313NEW img,
+#MO25313NEW a,
+#MO25313NEW table,
+#MO25313NEW tr,
+#MO25313NEW th,
+#MO25313NEW td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+#MO25313NEW header,
+#MO25313NEW footer,
+#MO25313NEW nav,
+#MO25313NEW section,
+#MO25313NEW article,
+#MO25313NEW main,
+#MO25313NEW aside,
+#MO25313NEW figure,
+#MO25313NEW figcaption {
+  display: block;
+}
+#MO25313NEW ol,
+#MO25313NEW ul {
+  list-style: none;
+}
+#MO25313NEW img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+#MO25313NEW a {
+  color: inherit;
+  text-decoration: none;
+}
+#MO25313NEW button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+#MO25313NEW input,
+#MO25313NEW select,
+#MO25313NEW textarea {
+  font: inherit;
+  color: inherit;
+  vertical-align: top;
+}
 @media screen and (max-width: 767px) {
   #MO25313NEW {
     padding: 0 0 calc(320 * 0.1333333333vw) 0;
@@ -123,12 +198,12 @@
 #MO25313NEW .product__block--02 {
   background-color: #fff;
   position: sticky;
-  top: calc(100vh - 417.2rem - 500px);
+  top: calc(100vh - 417.2rem - 1000px);
   padding-bottom: 14rem;
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__block--02 {
-    top: calc(100vh - 7053 * 0.1333333333vw - 500px);
+    top: calc(100vh - 7053 * 0.1333333333vw - 1000px);
     padding-bottom: calc(138 * 0.1333333333vw);
   }
 }
@@ -162,9 +237,12 @@
   margin-inline: auto;
 }
 #MO25313NEW .product__image a:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+#MO25313NEW .product__image img {
+  height: auto;
 }
 #MO25313NEW .product__image .movie a {
   -webkit-transition: 0.3s;
