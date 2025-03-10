@@ -14,6 +14,38 @@ $(document).ready(function () {
 
     fadeAnimation();
     $(window).on('scroll', fadeAnimation);
+
+
+    // ミュートアイコン
+    $(".fv__video").each(function () {
+      this.muted = true;
+    });
+
+    $(".js-sound-toggle").each(function () {
+        var $soundToggle = $(this);
+        var $parent = $soundToggle.closest("a");
+        var $videos = $parent.find("video");
+
+        function updateIcon() {
+            var isMuted = $videos.get(0).muted;
+            $soundToggle.attr("src", isMuted ? "img/ico_sound_off.svg" : "img/ico_sound_on.svg");
+        }
+
+
+        updateIcon();
+
+        $soundToggle.on("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            var isMuted = $videos.get(0).muted;
+            $videos.each(function () {
+                this.muted = !isMuted;
+            });
+
+            updateIcon();
+        });
+    });
 });
 
 
@@ -36,19 +68,19 @@ $(window).on('load', function () {
     // 表示される順番：.product__image--03_2 → .product__image--03_1 → .product__image--03_3
     tl.from(".gsap-area .product__image-wrap--03 .product__image--03_2", {
       opacity: 0,
-      x: -70,
+      x: 70,
       duration: 3,
       ease: "power2.out"
     })
     .from(".gsap-area .product__image-wrap--03 .product__image--03_1", {
       opacity: 0,
-      x: -70,
+      x: 70,
       duration: 3,
       ease: "power2.out"
     })
     .from(".gsap-area .product__image-wrap--03 .product__image--03_3", {
       opacity: 0,
-      x: -70,
+      x: 70,
       duration: 3,
       ease: "power2.out"
     });

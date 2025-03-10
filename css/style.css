@@ -159,6 +159,7 @@
   max-width: 128rem;
 }
 #MO25313NEW .fv a {
+  position: relative;
   display: block;
   width: 100%;
 }
@@ -169,6 +170,21 @@
 }
 #MO25313NEW .fv__video {
   width: 100%;
+}
+#MO25313NEW .sound-icon {
+  position: absolute;
+  bottom: 2.1rem;
+  right: 2rem;
+  width: 4rem;
+  height: 4rem;
+}
+@media screen and (max-width: 767px) {
+  #MO25313NEW .sound-icon {
+    bottom: calc(18 * 0.1333333333vw);
+    right: calc(20 * 0.1333333333vw);
+    width: calc(60 * 0.1333333333vw);
+    height: calc(60 * 0.1333333333vw);
+  }
 }
 #MO25313NEW .title {
   margin-top: 8.6rem;
@@ -256,6 +272,7 @@
   height: auto;
 }
 #MO25313NEW .product__image .movie a {
+  position: relative;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
