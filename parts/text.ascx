@@ -1,4 +1,4 @@
-<%--
+﻿<%--
 =========================================================================================================
 Module      : スマートフォン用カスタムパーツテンプレート画面(CustomPartsTemplate.ascx)
 ･･･････････････････････････････････････････････････････････････････････････････････････････････････････
@@ -30,10 +30,10 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
   <div class="fv">
     <a href="http://usagi-online.com/s/YYMMDDXXX/search?link=officialwe%EF%BD%82">
         <video class="fv__video pc_only" playsinline="" autoplay="" muted="" loop="">
-        <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_pc.jpg">
+        <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-PC-01.jpg">
         </video>
         <video class="fv__video sp_only" playsinline="" autoplay="" muted="" loop="">
-        <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_sp.jpg">
+        <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-SP-01.jpg">
         </video>
         <img src="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/ico_sound_off.svg" class="sound-icon js-sound-toggle">
     </a>
@@ -61,10 +61,10 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
               <div class="movie js-fadeIn">
                   <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW04">
                       <video class="pc_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_pc.jpg">
+                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_01_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-PC-02.jpg">
                       </video>
                       <video class="sp_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_sp.jpg">
+                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_01_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-SP-02.jpg">
                       </video>
                   </a>
               </div>
@@ -201,10 +201,10 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
               <div class="movie js-fadeIn">
                   <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW02">
                       <video class="pc_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_pc.jpg">
+                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_02_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-PC-03.jpg">
                       </video>
                       <video class="sp_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_sp.jpg">
+                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_02_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-SP-03.jpg">
                       </video>
                   </a>
               </div>
@@ -239,10 +239,10 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
               <div class="movie js-fadeIn">
                   <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW01">
                       <video class="pc_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_pc.jpg">
+                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_03_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-PC-04.jpg">
                       </video>
                       <video class="sp_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_sp.jpg">
+                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_03_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-SP-04.jpg">
                       </video>
                   </a>
               </div>
@@ -377,7 +377,7 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
               <p>Stylist&nbsp;&nbsp;/&nbsp;&nbsp;Yuto Inagaki at CEKAI</p>
               <p>Hair&Make-up&nbsp;&nbsp;/&nbsp;&nbsp;Ryoki Shimonagata</p>
               <p>Model&nbsp;&nbsp;/&nbsp;&nbsp;LJ at Bravo models, Naja Kirk at donna</p>
-              <p>Direction&nbsp;&nbsp;/&nbsp;&nbsp;Nobuki Tanaka at FUKUWARAI</p>
+              <p>Creative Direction&nbsp;/&nbsp;&nbsp;Nobuki Tanaka at FUKUWARAI</p>
           </div>
       </div>
   </div><!-- product__block--04 -->
