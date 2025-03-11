@@ -28,14 +28,15 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
 
 <article class="main-contents" id="MO25313NEW" >
   <div class="fv">
-      <a href="http://usagi-online.com/s/YYMMDDXXX/search?link=officialwe%EF%BD%82">
-          <video class="fv__video pc_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-          <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_pc.jpg">
-          </video>
-          <video class="fv__video sp_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-          <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_sp.jpg">
-          </video>
-      </a>
+    <a href="http://usagi-online.com/s/YYMMDDXXX/search?link=officialwe%EF%BD%82">
+        <video class="fv__video pc_only" playsinline="" autoplay="" muted="" loop="">
+        <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_pc.jpg">
+        </video>
+        <video class="fv__video sp_only" playsinline="" autoplay="" muted="" loop="">
+        <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_sp.jpg">
+        </video>
+        <img src="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/ico_sound_off.svg" class="sound-icon js-sound-toggle">
+    </a>
   </div>
 
   <div class="title">
@@ -60,10 +61,10 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
               <div class="movie js-fadeIn">
                   <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW04">
                       <video class="pc_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_pc.mp4" type="video/mp4" poster="/Page/feature/2024/0227<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/fv_pc.jpg">
+                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_pc.jpg">
                       </video>
                       <video class="sp_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_sp.mp4" type="video/mp4" poster="/Page/feature/2024/0227<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/fv_sp.jpg">
+                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_sp.jpg">
                       </video>
                   </a>
               </div>
@@ -200,10 +201,10 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
               <div class="movie js-fadeIn">
                   <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW02">
                       <video class="pc_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_pc.mp4" type="video/mp4" poster="/Page/feature/2024/0227<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/fv_pc.jpg">
+                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_pc.jpg">
                       </video>
                       <video class="sp_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_sp.mp4" type="video/mp4" poster="/Page/feature/2024/0227<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/fv_sp.jpg">
+                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO250227KAREN_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2024/0227/img/fv_sp.jpg">
                       </video>
                   </a>
               </div>

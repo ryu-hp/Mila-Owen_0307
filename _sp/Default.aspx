@@ -9,7 +9,6 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
 <%-- ▽ ユーザーコントロール宣言領域 ▽ --%>
 <%@ Page Title="25'SPRING JOURNAL │ Mila Owen（ミラ オーウェン）公式サイト" Language="C#" Inherits="BasePage" MasterPageFile="~/SmartPhone/Form/Common/DefaultPage.master" %>
 <%@ Register TagPrefix="uc" TagName="index" Src="~/Page/feature/2025/0313/parts/text.ascx" %>
-<%@ Register TagPrefix="uc" TagName="archive" Src="~/Page/topics/parts/archive.ascx" %>
 <%-- △ ユーザーコントロール宣言領域 △ --%>
 
 <%--
@@ -28,10 +27,6 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
   <%-- ▽ 編集エリア ▽ --%>
   <uc:index runat="server" />
 
-  <%-- アーカイブエリア --%>
-  <div class="archive-area">
-    <uc:archive runat="server" />
-  </div>
   <%-- △ 編集エリア △ --%>
 </main>
 </asp:Content>

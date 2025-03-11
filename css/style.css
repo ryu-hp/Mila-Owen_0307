@@ -2,12 +2,12 @@
 /* フッター */
 @media screen and (min-width: 768px) {
   .footer {
-    padding-top: 27.7rem;
+    padding-top: 21.6rem;
   }
 }
 @media screen and (max-width: 767px) {
   .footer {
-    padding-top: 25.6vw;
+    padding-top: 24.6666666667vw;
   }
 }
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -15,7 +15,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////// */
 #MO25313NEW {
   margin: 0 auto;
-  padding: 0 0 22rem 0;
+  padding: 0 0 0 0;
   color: #000000;
   font-weight: 400;
   font-family: "neue-haas-grotesk-display", sans-serif;
@@ -100,7 +100,7 @@
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW {
-    padding: 0 0 calc(305 * 0.1333333333vw) 0;
+    padding: 0 0 0 0;
   }
 }
 #MO25313NEW .sp_only {
