@@ -15,6 +15,11 @@ $(document).ready(function () {
     fadeAnimation();
     $(window).on('scroll', fadeAnimation);
 
+    setTimeout(function () {
+      document.querySelector('.js-titleFadeIn')?.classList.add('visible');
+    }, 5000);
+
+
 
     // ミュートアイコン
     $(".fv__video").each(function () {
@@ -84,4 +89,15 @@ $(window).on('load', function () {
       duration: 3,
       ease: "power2.out"
     });
+
+    const swiperEls = document.querySelectorAll('.fade-1-swiper');
+    if (swiperEls.length > 0) {
+      const swiperFade3 = new Swiper('.fade-1-swiper', {
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        loop: true,
+        speed: 1000,
+        autoplay: { delay: 3000 },
+      });
+    }
 });

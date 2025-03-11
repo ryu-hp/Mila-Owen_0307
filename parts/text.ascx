@@ -18,7 +18,9 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
 <link rel="stylesheet" href='<%= Constants.PATH_ROOT %>Css/lp_common.css?ver=<%: System.IO.File.GetLastWriteTime(HttpContext.Current.Server.MapPath(Constants.PATH_ROOT + @"Css/lp_common.css")).ToString("yyMMddHHmmss") %>'>
 <%-- コンテンツ部分用CSS読み込みここから --%>
 <link rel="stylesheet" href="https://use.typekit.net/jth3uwv.css">
-<link rel="stylesheet" href="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/css/style.css?0309-17:59">
+<link rel="stylesheet" href="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/css/style.css?0312-08:41">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <%-- コンテンツ部分用CSS読み込みここまで --%>
 
 <%-- ▽ 編集エリア ▽ --%>
@@ -28,7 +30,7 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
 
 <article class="main-contents" id="MO25313NEW" >
   <div class="fv">
-    <a href="http://usagi-online.com/s/YYMMDDXXX/search?link=officialwe%EF%BD%82">
+    <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEWALL">
         <video class="fv__video pc_only" playsinline="" autoplay="" muted="" loop="">
         <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-PC-01.jpg">
         </video>
@@ -39,7 +41,7 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
     </a>
   </div>
 
-  <div class="title">
+  <div class="title js-titleFadeIn">
       <h2 class="title__text"><img src="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/title_01.svg" alt="25’SPRING JOURNAL" width="415"></h2>
   </div>
 
@@ -227,24 +229,37 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
                   </a>
               </div>
   
-              <div class="product__image product__image--07_2">
-                  <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW01" class="js-fadeIn">
-                      <img src="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/250217_Mila_Owen_05_0337.jpg" width="460" height="575" alt="" loading="lazy">
-                      <img src="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/250217_Mila_Owen_05_0339.jpg" width="460" height="575" alt="" loading="lazy">
-                  </a>
+              <div class="product__image product__image--07_2 js-fadeIn">
+                <!-- Swiper -->
+                <div id="fade-1-swiper" class="swiper fade-1-swiper">
+                    <!-- 必要に応じたwrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- スライド -->
+                        <div class="swiper-slide">
+                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW01" class="">
+                                <img src="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/250217_Mila_Owen_05_0337.jpg" width="460" height="575" alt="" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW01">
+                                <img src="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/250217_Mila_Owen_05_0339.jpg" width="460" height="575" alt="" loading="lazy">
+                            </a>
+                        </div>
+                    </div>
+                </div>
               </div>
           </div>
   
           <div class="product__image product__image--07_3">
               <div class="movie js-fadeIn">
-                  <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW01">
-                      <video class="pc_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_03_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-PC-04.jpg">
-                      </video>
-                      <video class="sp_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
-                      <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_03_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-SP-04.jpg">
-                      </video>
-                  </a>
+                <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW01">
+                    <video class="pc_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
+                    <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_03_pc.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-PC-04.jpg">
+                    </video>
+                    <video class="sp_only" id="mvVideo" playsinline="" autoplay="" muted="" loop="">
+                    <source src="https://milaowen.com/Contents/ImagesPkg/movie/MO25313NEW_03_sp.mp4" type="video/mp4" poster="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/mila-owen-movie-image-SP-04.jpg">
+                    </video>
+                </a>
               </div>
               <div class="product__credit product__credit--07">
                   <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WNT251047">Knit tops 5,940yen</a>
@@ -278,10 +293,29 @@ Copyright   : Copyright w2solution Co.,Ltd. 2011 All Rights Reserved.
           </div>
   
           <div class="product__image product__image--09_2">
-              <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW08" class="js-fadeIn">
+            <div class="product__image--09_2-wrap js-fadeIn">
+                <!-- Swiper -->
+                <div id="fade-2-swiper" class="swiper fade-1-swiper">
+                    <!-- 必要に応じたwrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- スライド -->
+                        <div class="swiper-slide">
+                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW08">
+                                <img src="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/250217_Mila_Owen_06_0427.jpg" width="480" height="600" alt="" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW08">
+                                <img src="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/250217_Mila_Owen_06_0422.jpg" width="480" height="600" alt="" loading="lazy">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <!-- <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductList.aspx?shop=0&pgi=MO250313NEW08" class="js-fadeIn">
                   <img src="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/250217_Mila_Owen_06_0427.jpg" width="480" height="600" alt="" loading="lazy">
                   <img src="<%= Constants.PATH_ROOT %>Page/feature/2025/0313/img/250217_Mila_Owen_06_0422.jpg" width="480" height="600" alt="" loading="lazy">
-              </a>
+              </a> -->
               <div class="product__credit product__credit--09">
                   <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WFC251182">Coat 17,930yen</a>
                   <a href="<%= Constants.PATH_ROOT %>Form/Product/ProductDetail.aspx?shop=&pid=09WFB251173">Shirt 9,460yen</a><br>

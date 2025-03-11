@@ -153,6 +153,22 @@
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
+#MO25313NEW .js-titleFadeIn {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 1s, visibility 1s, -webkit-transform 1s;
+  transition: opacity 1s, visibility 1s, -webkit-transform 1s;
+  transition: opacity 1s, visibility 1s, transform 1s;
+  transition: opacity 1s, visibility 1s, transform 1s, -webkit-transform 1s;
+}
+#MO25313NEW .js-titleFadeIn.visible {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
 #MO25313NEW .fv {
   margin-inline: auto;
   width: 100%;
@@ -778,30 +794,14 @@
 }
 #MO25313NEW .product__image--07_2 {
   position: relative;
+  width: 100%;
+  max-width: 46rem;
 }
 #MO25313NEW .product__image--07_2 a {
   position: relative;
 }
-#MO25313NEW .product__image--07_2 a img {
-  width: 100%;
-  max-width: 46rem;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-#MO25313NEW .product__image--07_2 a img:nth-child(2) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-#MO25313NEW .product__image--07_2 a:hover img:first-child {
-  opacity: 0;
-}
-#MO25313NEW .product__image--07_2 a:hover img:nth-child(2) {
-  opacity: 1;
-}
 @media screen and (max-width: 767px) {
-  #MO25313NEW .product__image--07_2 a img {
+  #MO25313NEW .product__image--07_2 {
     max-width: 100%;
   }
 }
@@ -887,32 +887,20 @@
 #MO25313NEW .product__image--09_2 {
   margin-top: 4.4rem;
 }
-#MO25313NEW .product__image--09_2 a {
-  position: relative;
-}
-#MO25313NEW .product__image--09_2 a img {
+#MO25313NEW .product__image--09_2-wrap {
   width: 100%;
   max-width: 48rem;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  margin-right: auto;
+  margin-left: auto;
 }
-#MO25313NEW .product__image--09_2 a img:nth-child(2) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-#MO25313NEW .product__image--09_2 a:hover img:first-child {
-  opacity: 0;
-}
-#MO25313NEW .product__image--09_2 a:hover img:nth-child(2) {
-  opacity: 1;
+#MO25313NEW .product__image--09_2 a {
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   #MO25313NEW .product__image--09_2 {
     margin-top: calc(46 * 0.1333333333vw);
   }
-  #MO25313NEW .product__image--09_2 a img {
+  #MO25313NEW .product__image--09_2-wrap {
     max-width: calc(640 * 0.1333333333vw);
   }
 }
