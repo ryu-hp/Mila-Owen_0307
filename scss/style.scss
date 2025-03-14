@@ -177,15 +177,13 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         transform: translateX(0);
     }
     .js-titleFadeIn {
-        transform: translateY(10px);
+        transform: translateY(3rem);
         opacity: 0;
-        visibility: hidden;
-        transition: opacity 1s, visibility 1s, transform 1s;
+        transition: opacity 1s ease, transform 1s ease;
     }
     .js-titleFadeIn.visible {
         transform: translateY(0);
         opacity: 1;
-        visibility: visible;
     }
 
     // FV
@@ -221,6 +219,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         right: spSize(20);
         width: spSize(60);
         height: spSize(60);
+        height:calc(60 * 100vw / 750)
       }
     }
 
@@ -257,12 +256,12 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
     .product__block--02 {
         background-color: #fff;
         position: sticky;
-        top: calc(100vh - 417.2rem - 1000px); //固定値1000px は GSAP 用
-        padding-bottom: 14.0rem;
-
+        top: calc(100vh - 567rem);
+        height: 567rem;
         @include mq(sp) {
-            top: calc(100vh - spSize(7053) - 1000px);
-            padding-bottom: spSize(138);
+            top: calc(100vh - spSize(9098) );
+            padding-bottom: spSize(0);
+            height: spSize(9098);
         }
     }
 
@@ -272,13 +271,25 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         position: sticky;
         top: calc(100vh - 458.8rem);
         padding-bottom: 13.5rem;
-
+        
         @include mq(sp) {
             top: calc(100vh - spSize(7539));
             padding-bottom: spSize(138);
         }
     }
+    
+    .product__block-wrap--03 {
+        position: sticky;
+        top: 0;
 
+        margin-top: 13.4rem;
+        min-height: 232.2rem;
+        @include mq(sp) {
+            margin-top: spSize(138);
+            min-height: auto;
+            padding-bottom: spSize(3742);
+        }
+    }
     .product__block--04 {
         position: relative;
         background-color: #fff;
@@ -521,80 +532,80 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
     }
 
     // product__image-wrap--03
-    .gsap-area {
-        padding-top: 13.4rem;
-        height: 95.9rem;
-
-        @include mq(sp) {
-            padding-top: spSize(138);
-            height: spSize(1835);
-        }
-    }
-
     .product__image-wrap--03 {
         position: relative;
         height: 100%;
     }
 
-    .product__image--03_1 {
+    .product__image--03_2 {
         position: absolute;
         z-index: 2;
         top: 0;
         right: 28.5rem;
+        width: 100%;
+        max-width: 48rem;
 
         img {
             width: 100%;
-            max-width: 48rem;
         }
 
         @include mq(sp) {
             right: 0;
+            max-width: spSize(610);
 
-            img {
-                max-width: spSize(610);
-            }
+            // img {
+            //     max-width: spSize(610);
+            // }
         }
     }
 
-    .product__image--03_2 {
+    .product__image--03_1 {
         position: absolute;
         z-index: 1;
         top: 13.5rem;
         left: 23.5rem;
+        width: 100%;
+        max-width: 48rem;
 
         img {
             width: 100%;
-            max-width: 48rem;
+            // max-width: 48rem;
         }
 
         @include mq(sp) {
             top: spSize(325);
             left: 0;
+            max-width: spSize(560);
 
-            img {
-                max-width: spSize(560);
-            }
+            // img {
+            //     max-width: spSize(560);
+            // }
         }
     }
 
     .product__image--03_3 {
         position: absolute;
         z-index: 2;
-        bottom: 0;
+        // bottom: 0;
         right: 35.5rem;
+        width: 100%;
+        max-width: 36rem;
+        top: 37.5rem;
 
         img {
             width: 100%;
-            max-width: 36rem;
+            // max-width: 36rem;
         }
 
         @include mq(sp) {
-            bottom: 0;
+            // bottom: 0;
             right: spSize(55);
+            max-width: spSize(440);
+            top: spSize(970);
 
-            img {
-                max-width: spSize(440);
-            }
+            // img {
+            //     max-width: spSize(440);
+            // }
         }
     }
 
@@ -621,6 +632,10 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
         }
     }
 
+    .product__block-wrap--04 {
+        background: #fff;
+        position: relative;
+    }
     // product__image-wrap--04
     .product__image-wrap--04 {
         position: relative;

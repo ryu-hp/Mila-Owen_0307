@@ -15,11 +15,6 @@ $(document).ready(function () {
     fadeAnimation();
     $(window).on('scroll', fadeAnimation);
 
-    setTimeout(function () {
-      document.querySelector('.js-titleFadeIn')?.classList.add('visible');
-    }, 5000);
-
-
 
     // ミュートアイコン
     $(".fv__video").each(function () {
@@ -54,50 +49,61 @@ $(document).ready(function () {
 });
 
 
+// slide
+const leftPanelAnimation = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  const container = document.querySelector(".js-panelTrigger");
+  const panels = container.querySelectorAll(".js-panelItem");
+
+  const timeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: container,
+      start: "top 0%",
+      end: `+=${1.5 * $(window).height() / 1}`,
+      scrub: 1,
+    },
+  });
+
+  panels.forEach((panel, index) => {
+    timeline.from(panel, {
+      x: "50%", 
+      opacity: 0,
+      duration: 5, 
+    }, index * 5); 
+  });
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  leftPanelAnimation();
+});
+
 
 $(window).on('load', function () {
-    gsap.registerPlugin(ScrollTrigger);
-
-    var tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".gsap-area",
-        start: "top top",
-        end: "1000px top",
-        // toggleActions: "play none none reverse",
-        scrub: true,
-        pin: true,
-        markers: false,
-      }
-    });
-
-    // 表示される順番：.product__image--03_2 → .product__image--03_1 → .product__image--03_3
-    tl.from(".gsap-area .product__image-wrap--03 .product__image--03_2", {
-      opacity: 0,
-      x: 70,
-      duration: 3,
-      ease: "power2.out"
-    })
-    .from(".gsap-area .product__image-wrap--03 .product__image--03_1", {
-      opacity: 0,
-      x: 70,
-      duration: 3,
-      ease: "power2.out"
-    })
-    .from(".gsap-area .product__image-wrap--03 .product__image--03_3", {
-      opacity: 0,
-      x: 70,
-      duration: 3,
-      ease: "power2.out"
-    });
-
-    const swiperEls = document.querySelectorAll('.fade-1-swiper');
-    if (swiperEls.length > 0) {
+  const swiperEls = document.querySelectorAll('.fade-1-swiper');
+  if (swiperEls.length > 0) {
       const swiperFade3 = new Swiper('.fade-1-swiper', {
-        effect: 'fade',
-        fadeEffect: { crossFade: true },
-        loop: true,
-        speed: 1000,
-        autoplay: { delay: 3000 },
+          effect: 'fade',
+          fadeEffect: { crossFade: true },
+          loop: true,
+          speed: 2000,
+          autoplay: { delay: 3000 },
       });
-    }
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const titleEl = document.querySelector('.js-titleFadeIn');
+  const videos = document.querySelectorAll('.fv__video');
+  if (!titleEl || videos.length === 0) return;
+
+  const delayTime = window.innerWidth <= 767 ? 5200 : 5000;
+
+  videos.forEach(video => {
+    video.addEventListener('play', function () {
+      setTimeout(() => {
+        titleEl.classList.add('visible');
+      }, delayTime);
+    });
+  });
 });
