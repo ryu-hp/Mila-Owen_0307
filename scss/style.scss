@@ -33,10 +33,12 @@ $breakpoint-sp: 767px;
 $font-family-main: "neue-haas-grotesk-display", sans-serif;
 
 // スマホ時サイズ管理
+// @function spSize($size) {
+//     @return calc(#{$size} * (100vw / 750));
+// }
 @function spSize($size) {
-    @return calc(#{$size} * (100vw / 750));
+    @return unquote("calc(#{$size} * (100vw / 750))");
 }
-
 
 ///// main /////
 #MO25313NEW {
@@ -288,6 +290,7 @@ $font-family-main: "neue-haas-grotesk-display", sans-serif;
             margin-top: spSize(138);
             min-height: auto;
             padding-bottom: spSize(3742);
+            top: spSize(67);
         }
     }
     .product__block--04 {
